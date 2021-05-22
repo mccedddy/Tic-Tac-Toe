@@ -52,15 +52,18 @@ namespace Tic_Tac_Toe
             this.moving = new System.Windows.Forms.Label();
             this.turnNumber = new System.Windows.Forms.Label();
             this.movingPlayer = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
             // 
+            this.btn1.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn1.Location = new System.Drawing.Point(12, 265);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(175, 175);
             this.btn1.TabIndex = 0;
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn_Click);
             // 
             // button4
             // 
@@ -91,6 +94,7 @@ namespace Tic_Tac_Toe
             // 
             // btn2
             // 
+            this.btn2.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn2.Location = new System.Drawing.Point(193, 265);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(175, 175);
@@ -99,6 +103,7 @@ namespace Tic_Tac_Toe
             // 
             // btn3
             // 
+            this.btn3.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn3.Location = new System.Drawing.Point(374, 265);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(175, 175);
@@ -107,6 +112,7 @@ namespace Tic_Tac_Toe
             // 
             // btn4
             // 
+            this.btn4.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn4.Location = new System.Drawing.Point(12, 446);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(175, 175);
@@ -115,6 +121,7 @@ namespace Tic_Tac_Toe
             // 
             // btn5
             // 
+            this.btn5.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn5.Location = new System.Drawing.Point(193, 446);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(175, 175);
@@ -123,6 +130,7 @@ namespace Tic_Tac_Toe
             // 
             // btn6
             // 
+            this.btn6.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn6.Location = new System.Drawing.Point(374, 446);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(175, 175);
@@ -131,6 +139,7 @@ namespace Tic_Tac_Toe
             // 
             // btn7
             // 
+            this.btn7.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn7.Location = new System.Drawing.Point(12, 627);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(175, 175);
@@ -139,6 +148,7 @@ namespace Tic_Tac_Toe
             // 
             // btn8
             // 
+            this.btn8.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn8.Location = new System.Drawing.Point(193, 627);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(175, 175);
@@ -147,6 +157,7 @@ namespace Tic_Tac_Toe
             // 
             // btn9
             // 
+            this.btn9.Font = new System.Drawing.Font("Papyrus", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn9.Location = new System.Drawing.Point(374, 627);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(175, 175);
@@ -167,7 +178,7 @@ namespace Tic_Tac_Toe
             // 
             this.turn.AutoSize = true;
             this.turn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.turn.Location = new System.Drawing.Point(224, 158);
+            this.turn.Location = new System.Drawing.Point(225, 147);
             this.turn.Name = "turn";
             this.turn.Size = new System.Drawing.Size(68, 32);
             this.turn.TabIndex = 10;
@@ -177,7 +188,7 @@ namespace Tic_Tac_Toe
             // 
             this.player1.AutoSize = true;
             this.player1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.player1.Location = new System.Drawing.Point(12, 158);
+            this.player1.Location = new System.Drawing.Point(13, 147);
             this.player1.Name = "player1";
             this.player1.Size = new System.Drawing.Size(98, 32);
             this.player1.TabIndex = 11;
@@ -187,7 +198,7 @@ namespace Tic_Tac_Toe
             // 
             this.player2.AutoSize = true;
             this.player2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.player2.Location = new System.Drawing.Point(454, 158);
+            this.player2.Location = new System.Drawing.Point(455, 147);
             this.player2.Name = "player2";
             this.player2.Size = new System.Drawing.Size(98, 32);
             this.player2.TabIndex = 12;
@@ -197,7 +208,7 @@ namespace Tic_Tac_Toe
             // 
             this.win1.AutoSize = true;
             this.win1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.win1.Location = new System.Drawing.Point(80, 203);
+            this.win1.Location = new System.Drawing.Point(81, 192);
             this.win1.Name = "win1";
             this.win1.Size = new System.Drawing.Size(27, 32);
             this.win1.TabIndex = 13;
@@ -207,7 +218,7 @@ namespace Tic_Tac_Toe
             // 
             this.score1.AutoSize = true;
             this.score1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.score1.Location = new System.Drawing.Point(9, 203);
+            this.score1.Location = new System.Drawing.Point(10, 192);
             this.score1.Name = "score1";
             this.score1.Size = new System.Drawing.Size(78, 32);
             this.score1.TabIndex = 14;
@@ -217,7 +228,7 @@ namespace Tic_Tac_Toe
             // 
             this.score2.AutoSize = true;
             this.score2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.score2.Location = new System.Drawing.Point(448, 203);
+            this.score2.Location = new System.Drawing.Point(449, 192);
             this.score2.Name = "score2";
             this.score2.Size = new System.Drawing.Size(78, 32);
             this.score2.TabIndex = 15;
@@ -227,7 +238,7 @@ namespace Tic_Tac_Toe
             // 
             this.win2.AutoSize = true;
             this.win2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.win2.Location = new System.Drawing.Point(522, 203);
+            this.win2.Location = new System.Drawing.Point(523, 192);
             this.win2.Name = "win2";
             this.win2.Size = new System.Drawing.Size(27, 32);
             this.win2.TabIndex = 16;
@@ -237,7 +248,7 @@ namespace Tic_Tac_Toe
             // 
             this.moving.AutoSize = true;
             this.moving.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.moving.Location = new System.Drawing.Point(188, 203);
+            this.moving.Location = new System.Drawing.Point(189, 192);
             this.moving.Name = "moving";
             this.moving.Size = new System.Drawing.Size(101, 32);
             this.moving.TabIndex = 17;
@@ -247,27 +258,37 @@ namespace Tic_Tac_Toe
             // 
             this.turnNumber.AutoSize = true;
             this.turnNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.turnNumber.Location = new System.Drawing.Point(298, 158);
+            this.turnNumber.Location = new System.Drawing.Point(299, 147);
             this.turnNumber.Name = "turnNumber";
             this.turnNumber.Size = new System.Drawing.Size(27, 32);
             this.turnNumber.TabIndex = 18;
-            this.turnNumber.Text = "0";
+            this.turnNumber.Text = "1";
             // 
             // movingPlayer
             // 
             this.movingPlayer.AutoSize = true;
             this.movingPlayer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.movingPlayer.Location = new System.Drawing.Point(279, 203);
+            this.movingPlayer.Location = new System.Drawing.Point(280, 192);
             this.movingPlayer.Name = "movingPlayer";
             this.movingPlayer.Size = new System.Drawing.Size(98, 32);
             this.movingPlayer.TabIndex = 19;
             this.movingPlayer.Text = "Player 1";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(476, 227);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(73, 34);
+            this.btnClear.TabIndex = 20;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 815);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.movingPlayer);
             this.Controls.Add(this.turnNumber);
             this.Controls.Add(this.moving);
@@ -320,6 +341,7 @@ namespace Tic_Tac_Toe
         private System.Windows.Forms.Label moving;
         private System.Windows.Forms.Label turnNumber;
         private System.Windows.Forms.Label movingPlayer;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
