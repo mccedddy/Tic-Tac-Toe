@@ -29,20 +29,297 @@ namespace Tic_Tac_Toe
         /// </summary>
         private void InitializeComponent()
         {
+            this.btn1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.title = new System.Windows.Forms.Label();
+            this.turn = new System.Windows.Forms.Label();
+            this.player1 = new System.Windows.Forms.Label();
+            this.player2 = new System.Windows.Forms.Label();
+            this.win1 = new System.Windows.Forms.Label();
+            this.score1 = new System.Windows.Forms.Label();
+            this.score2 = new System.Windows.Forms.Label();
+            this.win2 = new System.Windows.Forms.Label();
+            this.moving = new System.Windows.Forms.Label();
+            this.turnNumber = new System.Windows.Forms.Label();
+            this.movingPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // btn1
+            // 
+            this.btn1.Location = new System.Drawing.Point(12, 265);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(175, 175);
+            this.btn1.TabIndex = 0;
+            this.btn1.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(322, 218);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 131);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(191, 218);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(123, 131);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(60, 218);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(123, 131);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btn2
+            // 
+            this.btn2.Location = new System.Drawing.Point(193, 265);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(175, 175);
+            this.btn2.TabIndex = 1;
+            this.btn2.UseVisualStyleBackColor = true;
+            // 
+            // btn3
+            // 
+            this.btn3.Location = new System.Drawing.Point(374, 265);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(175, 175);
+            this.btn3.TabIndex = 2;
+            this.btn3.UseVisualStyleBackColor = true;
+            // 
+            // btn4
+            // 
+            this.btn4.Location = new System.Drawing.Point(12, 446);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(175, 175);
+            this.btn4.TabIndex = 3;
+            this.btn4.UseVisualStyleBackColor = true;
+            // 
+            // btn5
+            // 
+            this.btn5.Location = new System.Drawing.Point(193, 446);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(175, 175);
+            this.btn5.TabIndex = 4;
+            this.btn5.UseVisualStyleBackColor = true;
+            // 
+            // btn6
+            // 
+            this.btn6.Location = new System.Drawing.Point(374, 446);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(175, 175);
+            this.btn6.TabIndex = 5;
+            this.btn6.UseVisualStyleBackColor = true;
+            // 
+            // btn7
+            // 
+            this.btn7.Location = new System.Drawing.Point(12, 627);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(175, 175);
+            this.btn7.TabIndex = 6;
+            this.btn7.UseVisualStyleBackColor = true;
+            // 
+            // btn8
+            // 
+            this.btn8.Location = new System.Drawing.Point(193, 627);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(175, 175);
+            this.btn8.TabIndex = 7;
+            this.btn8.UseVisualStyleBackColor = true;
+            // 
+            // btn9
+            // 
+            this.btn9.Location = new System.Drawing.Point(374, 627);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(175, 175);
+            this.btn9.TabIndex = 8;
+            this.btn9.UseVisualStyleBackColor = true;
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Niagara Engraved", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.title.Location = new System.Drawing.Point(57, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(449, 149);
+            this.title.TabIndex = 9;
+            this.title.Text = "Tic-Tac-Toe";
+            // 
+            // turn
+            // 
+            this.turn.AutoSize = true;
+            this.turn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.turn.Location = new System.Drawing.Point(224, 158);
+            this.turn.Name = "turn";
+            this.turn.Size = new System.Drawing.Size(68, 32);
+            this.turn.TabIndex = 10;
+            this.turn.Text = "Turn:";
+            // 
+            // player1
+            // 
+            this.player1.AutoSize = true;
+            this.player1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.player1.Location = new System.Drawing.Point(12, 158);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(98, 32);
+            this.player1.TabIndex = 11;
+            this.player1.Text = "Player 1";
+            // 
+            // player2
+            // 
+            this.player2.AutoSize = true;
+            this.player2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.player2.Location = new System.Drawing.Point(454, 158);
+            this.player2.Name = "player2";
+            this.player2.Size = new System.Drawing.Size(98, 32);
+            this.player2.TabIndex = 12;
+            this.player2.Text = "Player 1";
+            // 
+            // win1
+            // 
+            this.win1.AutoSize = true;
+            this.win1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.win1.Location = new System.Drawing.Point(80, 203);
+            this.win1.Name = "win1";
+            this.win1.Size = new System.Drawing.Size(27, 32);
+            this.win1.TabIndex = 13;
+            this.win1.Text = "0";
+            // 
+            // score1
+            // 
+            this.score1.AutoSize = true;
+            this.score1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.score1.Location = new System.Drawing.Point(9, 203);
+            this.score1.Name = "score1";
+            this.score1.Size = new System.Drawing.Size(78, 32);
+            this.score1.TabIndex = 14;
+            this.score1.Text = "Score:";
+            // 
+            // score2
+            // 
+            this.score2.AutoSize = true;
+            this.score2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.score2.Location = new System.Drawing.Point(448, 203);
+            this.score2.Name = "score2";
+            this.score2.Size = new System.Drawing.Size(78, 32);
+            this.score2.TabIndex = 15;
+            this.score2.Text = "Score:";
+            // 
+            // win2
+            // 
+            this.win2.AutoSize = true;
+            this.win2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.win2.Location = new System.Drawing.Point(522, 203);
+            this.win2.Name = "win2";
+            this.win2.Size = new System.Drawing.Size(27, 32);
+            this.win2.TabIndex = 16;
+            this.win2.Text = "0";
+            // 
+            // moving
+            // 
+            this.moving.AutoSize = true;
+            this.moving.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moving.Location = new System.Drawing.Point(188, 203);
+            this.moving.Name = "moving";
+            this.moving.Size = new System.Drawing.Size(101, 32);
+            this.moving.TabIndex = 17;
+            this.moving.Text = "Moving:";
+            // 
+            // turnNumber
+            // 
+            this.turnNumber.AutoSize = true;
+            this.turnNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.turnNumber.Location = new System.Drawing.Point(298, 158);
+            this.turnNumber.Name = "turnNumber";
+            this.turnNumber.Size = new System.Drawing.Size(27, 32);
+            this.turnNumber.TabIndex = 18;
+            this.turnNumber.Text = "0";
+            // 
+            // movingPlayer
+            // 
+            this.movingPlayer.AutoSize = true;
+            this.movingPlayer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.movingPlayer.Location = new System.Drawing.Point(279, 203);
+            this.movingPlayer.Name = "movingPlayer";
+            this.movingPlayer.Size = new System.Drawing.Size(98, 32);
+            this.movingPlayer.TabIndex = 19;
+            this.movingPlayer.Text = "Player 1";
             // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 391);
+            this.ClientSize = new System.Drawing.Size(564, 815);
+            this.Controls.Add(this.movingPlayer);
+            this.Controls.Add(this.turnNumber);
+            this.Controls.Add(this.moving);
+            this.Controls.Add(this.win2);
+            this.Controls.Add(this.score2);
+            this.Controls.Add(this.score1);
+            this.Controls.Add(this.win1);
+            this.Controls.Add(this.player2);
+            this.Controls.Add(this.player1);
+            this.Controls.Add(this.turn);
+            this.Controls.Add(this.title);
+            this.Controls.Add(this.btn9);
+            this.Controls.Add(this.btn8);
+            this.Controls.Add(this.btn7);
+            this.Controls.Add(this.btn6);
+            this.Controls.Add(this.btn5);
+            this.Controls.Add(this.btn4);
+            this.Controls.Add(this.btn3);
+            this.Controls.Add(this.btn2);
+            this.Controls.Add(this.btn1);
             this.Name = "TicTacToe";
             this.Text = "Tic-Tac-Toe";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Label turn;
+        private System.Windows.Forms.Label player1;
+        private System.Windows.Forms.Label player2;
+        private System.Windows.Forms.Label win1;
+        private System.Windows.Forms.Label score1;
+        private System.Windows.Forms.Label score2;
+        private System.Windows.Forms.Label win2;
+        private System.Windows.Forms.Label moving;
+        private System.Windows.Forms.Label turnNumber;
+        private System.Windows.Forms.Label movingPlayer;
     }
 }
 

@@ -16,6 +16,5 @@ namespace Tic_Tac_Toe
         {
             InitializeComponent();
         }
-
     }
 }
