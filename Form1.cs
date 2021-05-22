@@ -18,22 +18,16 @@ namespace Tic_Tac_Toe
         }
         // Fields
         int turns = 1;
+        string winner = "";
         private void btn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             if (movingPlayer.Text == "Player 1" && btn.Text == "") { btn.Text = "X"; }
             if (movingPlayer.Text == "Player 2" && btn.Text == "") { btn.Text = "O"; }
+            winConditions();
             nextTurn();
         }
-        private void nextTurn()
-        {
-            int turnmodulus = turns % 2;
-            if (turnmodulus != 0) { movingPlayer.Text = "Player 2"; }
-            else { movingPlayer.Text = "Player 1"; }
-            turns = turns + 1;
-            if (turns < 10) { turnNumber.Text = Convert.ToString(turns); }
-        }
-
+        
         private void btnClear_Click(object sender, EventArgs e)
         {
             btn1.Text = "";
@@ -50,6 +44,45 @@ namespace Tic_Tac_Toe
             movingPlayer.Text = "Player 1";
             win1.Text = "0";
             win2.Text = "0";
+        }
+        private void nextTurn()
+        {
+            int turnmodulus = turns % 2;
+            if (turnmodulus != 0) { movingPlayer.Text = "Player 2"; }
+            else { movingPlayer.Text = "Player 1"; }
+            turns = turns + 1;
+            if (turns < 10) { turnNumber.Text = Convert.ToString(turns); }
+        }
+
+        private void winConditions()
+        {
+            if (
+                (btn1.Text == "X" && btn2.Text == "X" && btn3.Text == "X") |
+                (btn4.Text == "X" && btn5.Text == "X" && btn6.Text == "X") |
+                (btn7.Text == "X" && btn8.Text == "X" && btn9.Text == "X") |
+                (btn1.Text == "X" && btn4.Text == "X" && btn7.Text == "X") |
+                (btn2.Text == "X" && btn5.Text == "X" && btn8.Text == "X") |
+                (btn3.Text == "X" && btn6.Text == "X" && btn9.Text == "X") |
+                (btn1.Text == "X" && btn5.Text == "X" && btn9.Text == "X") |
+                (btn3.Text == "X" && btn5.Text == "X" && btn7.Text == "X")
+                )
+            {
+                winner = "Player 1";
+            }
+            if (
+                (btn1.Text == "O" && btn2.Text == "O" && btn3.Text == "O") |
+                (btn4.Text == "O" && btn5.Text == "O" && btn6.Text == "O") |
+                (btn7.Text == "O" && btn8.Text == "O" && btn9.Text == "O") |
+                (btn1.Text == "O" && btn4.Text == "O" && btn7.Text == "O") |
+                (btn2.Text == "O" && btn5.Text == "O" && btn8.Text == "O") |
+                (btn3.Text == "O" && btn6.Text == "O" && btn9.Text == "O") |
+                (btn1.Text == "O" && btn5.Text == "O" && btn9.Text == "O") |
+                (btn3.Text == "O" && btn5.Text == "O" && btn7.Text == "O")
+                )
+            {
+                winner = "Player 2";
+            }
+            if (winner != "") { MessageBox.Show(winner + " Win"); }
         }
     }
 }
