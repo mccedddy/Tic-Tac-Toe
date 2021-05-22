@@ -20,29 +20,36 @@ namespace Tic_Tac_Toe
         int turns = 1;
         private void btn_Click(object sender, EventArgs e)
         {
-            if (movingPlayer.Text == "Player 1" && btn1.Text == "")
-            {
-                btn1.Text = "X";
-                nextTurn();
-            }
-            if (movingPlayer.Text == "Player 2" && btn1.Text == "")
-            {
-                btn1.Text = "O";
-                nextTurn();
-            }
+            Button btn = sender as Button;
+            if (movingPlayer.Text == "Player 1" && btn.Text == "") { btn.Text = "X"; }
+            if (movingPlayer.Text == "Player 2" && btn.Text == "") { btn.Text = "O"; }
+            nextTurn();
         }
         private void nextTurn()
         {
-            if (movingPlayer.Text == "Player 1") 
-            { 
-                movingPlayer.Text = "Player 2"; 
-            }
-            if (movingPlayer.Text == "Player 2") 
-            { 
-                movingPlayer.Text = "Player 1"; 
-            }
+            int turnmodulus = turns % 2;
+            if (turnmodulus != 0) { movingPlayer.Text = "Player 2"; }
+            else { movingPlayer.Text = "Player 1"; }
             turns = turns + 1;
-            turnNumber.Text = Convert.ToString(turns);
+            if (turns < 10) { turnNumber.Text = Convert.ToString(turns); }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            btn1.Text = "";
+            btn2.Text = "";
+            btn3.Text = "";
+            btn4.Text = "";
+            btn5.Text = "";
+            btn6.Text = "";
+            btn7.Text = "";
+            btn8.Text = "";
+            btn9.Text = "";
+            turns = 1;
+            turnNumber.Text = "1";
+            movingPlayer.Text = "Player 1";
+            win1.Text = "0";
+            win2.Text = "0";
         }
     }
 }
