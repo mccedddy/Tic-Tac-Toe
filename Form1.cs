@@ -26,6 +26,7 @@ namespace Tic_Tac_Toe
             if (movingPlayer.Text == "Player 2" && btn.Text == "") { btn.Text = "O"; }
             winConditions();
             nextTurn();
+            if (winner != "") { nextRound(); }
         }
         
         private void btnClear_Click(object sender, EventArgs e)
@@ -82,7 +83,34 @@ namespace Tic_Tac_Toe
             {
                 winner = "Player 2";
             }
-            if (winner != "") { MessageBox.Show(winner + " Win"); }
+            if (winner != "") 
+            { 
+                if (winner == "Player 1")
+                {
+                    win1.Text = Convert.ToString(int.Parse(win1.Text) + 1);
+                }
+                if (winner == "Player 2")
+                {
+                    win2.Text = Convert.ToString(int.Parse(win2.Text) + 1);
+                }
+                MessageBox.Show(winner + " Win");
+            }
+        }
+        private void nextRound()
+        {
+            winner = "";
+            btn1.Text = "";
+            btn2.Text = "";
+            btn3.Text = "";
+            btn4.Text = "";
+            btn5.Text = "";
+            btn6.Text = "";
+            btn7.Text = "";
+            btn8.Text = "";
+            btn9.Text = "";
+            turns = 1;
+            turnNumber.Text = "1";
+            movingPlayer.Text = "Player 1";
         }
     }
 }

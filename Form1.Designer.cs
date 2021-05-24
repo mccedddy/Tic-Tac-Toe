@@ -210,7 +210,7 @@ namespace Tic_Tac_Toe
             this.player2.Name = "player2";
             this.player2.Size = new System.Drawing.Size(98, 32);
             this.player2.TabIndex = 12;
-            this.player2.Text = "Player 1";
+            this.player2.Text = "Player 2";
             // 
             // win1
             // 
