@@ -22,13 +22,16 @@ namespace Tic_Tac_Toe
         private void btn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (btn.Text == "") // If the tile is empty, input X or O
+            // If the tile is empty, input X or O
+            if (btn.Text == "") 
             {
                 if (movingPlayer.Text == "Player 1" && btn.Text == "") { btn.Text = "X"; }
                 if (movingPlayer.Text == "Player 2" && btn.Text == "") { btn.Text = "O"; }
                 winConditions();
                 nextTurn();
-                if (winner != "") { nextRound(); } // If there's no winner, proceed to next round
+
+                // If there's still no winner, proceed to next turn
+                if (winner != "") { nextRound(); } 
             }
         }
         
@@ -56,6 +59,7 @@ namespace Tic_Tac_Toe
             if (turns % 2 != 0) { movingPlayer.Text = "Player 2"; }
             else { movingPlayer.Text = "Player 1"; }
             turns = turns + 1;
+
             // turnNumber.Text will not exceed 9 turns and change number of turns
             if (turns < 10) { turnNumber.Text = Convert.ToString(turns); } 
         }
@@ -73,9 +77,8 @@ namespace Tic_Tac_Toe
                 (btn1.Text == "X" && btn5.Text == "X" && btn9.Text == "X") |
                 (btn3.Text == "X" && btn5.Text == "X" && btn7.Text == "X")
                 )
-            {
-                winner = "Player 1";
-            }
+            { winner = "Player 1"; }
+
             // If the tiles have 3 O in a row, Player 2 wins
             if (
                 (btn1.Text == "O" && btn2.Text == "O" && btn3.Text == "O") |
@@ -87,9 +90,8 @@ namespace Tic_Tac_Toe
                 (btn1.Text == "O" && btn5.Text == "O" && btn9.Text == "O") |
                 (btn3.Text == "O" && btn5.Text == "O" && btn7.Text == "O")
                 )
-            {
-                winner = "Player 2";
-            }
+            { winner = "Player 2"; }
+
             // If the tiles are full and there's no winner, the match is a draw
             if (btn1.Text != "" &&
             btn2.Text != "" &&
@@ -101,21 +103,22 @@ namespace Tic_Tac_Toe
             btn8.Text != "" &&
             btn9.Text != "" &&
             winner == "")
-            {
-                winner = "Draw";
-                MessageBox.Show(winner);
-            }
-            if (winner != "") // If a winner has been declared, add score to the winner and show on message box
+            { winner = "Draw"; }
+
+            // If a winner has been declared, add score to the winner and show on message box
+            if (winner != "") 
             { 
+                // Add score to the winner
                 if (winner == "Player 1")
-                {
-                    win1.Text = Convert.ToString(int.Parse(win1.Text) + 1);
-                }
+                { win1.Text = Convert.ToString(int.Parse(win1.Text) + 1); }
                 if (winner == "Player 2")
-                {
-                    win2.Text = Convert.ToString(int.Parse(win2.Text) + 1);
-                }
-                MessageBox.Show(winner + " Win");
+                { win2.Text = Convert.ToString(int.Parse(win2.Text) + 1); }
+
+                // Show winner
+                if (winner == "Draw")
+                { MessageBox.Show(winner); }
+                else
+                { MessageBox.Show(winner + " Win"); }
             }
         }
         private void nextRound()
