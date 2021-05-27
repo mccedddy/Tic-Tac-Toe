@@ -27,10 +27,18 @@ namespace Tic_Tac_Toe
             {
                 if (movingPlayer.Text == "Player 1" && btn.Text == "") { btn.Text = "X"; }
                 if (movingPlayer.Text == "Player 2" && btn.Text == "") { btn.Text = "O"; }
+
+                // If btn.text is X, color is light red. If btn.text is O, color is light blue
+                if (btn.Text == "X") { btn.BackColor = Color.FromArgb(255, 128, 128); }
+                if (btn.Text == "O") { btn.BackColor = Color.FromArgb(128, 128, 225); }
+
+                // Check win conditions
                 winConditions();
-                nextTurn();
 
                 // If there's still no winner, proceed to next turn
+                nextTurn();
+
+                // If there is already a winner, proceed to next round
                 if (winner != "") { nextRound(); } 
             }
         }
@@ -38,18 +46,7 @@ namespace Tic_Tac_Toe
         private void btnClear_Click(object sender, EventArgs e)
         {
             // Reset everything
-            btn1.Text = "";
-            btn2.Text = "";
-            btn3.Text = "";
-            btn4.Text = "";
-            btn5.Text = "";
-            btn6.Text = "";
-            btn7.Text = "";
-            btn8.Text = "";
-            btn9.Text = "";
-            turns = 1;
-            turnNumber.Text = "1";
-            movingPlayer.Text = "Player 1";
+            nextRound();
             win1.Text = "0";
             win2.Text = "0";
         }
@@ -113,12 +110,16 @@ namespace Tic_Tac_Toe
                 { win1.Text = Convert.ToString(int.Parse(win1.Text) + 1); }
                 if (winner == "Player 2")
                 { win2.Text = Convert.ToString(int.Parse(win2.Text) + 1); }
-
+                
                 // Show winner
                 if (winner == "Draw")
                 { MessageBox.Show(winner); }
                 else
-                { MessageBox.Show(winner + " Win"); }
+                {
+                    // Change the color of the winning buttons
+                    winnerColor();
+                    MessageBox.Show(winner + " Win"); 
+                }
             }
         }
         private void nextRound()
@@ -137,6 +138,66 @@ namespace Tic_Tac_Toe
             turns = 1;
             turnNumber.Text = "1";
             movingPlayer.Text = "Player 1";
+            btn1.BackColor = Color.White;
+            btn2.BackColor = Color.White;
+            btn3.BackColor = Color.White;
+            btn4.BackColor = Color.White;
+            btn5.BackColor = Color.White;
+            btn6.BackColor = Color.White;
+            btn7.BackColor = Color.White;
+            btn8.BackColor = Color.White;
+            btn9.BackColor = Color.White;
+        }
+        private void winnerColor()
+        {
+            if (btn1.Text == btn2.Text && btn2.Text == btn3.Text && btn1.Text != "")
+            {
+                btn1.BackColor = Color.Green;
+                btn2.BackColor = Color.Green;
+                btn3.BackColor = Color.Green;
+            }
+            if (btn4.Text == btn5.Text && btn5.Text == btn6.Text && btn4.Text != "")
+            {
+                btn4.BackColor = Color.Green;
+                btn5.BackColor = Color.Green;
+                btn6.BackColor = Color.Green;
+            }
+            if (btn7.Text == btn8.Text && btn8.Text == btn9.Text && btn7.Text != "")
+            {
+                btn7.BackColor = Color.Green;
+                btn8.BackColor = Color.Green;
+                btn9.BackColor = Color.Green;
+            }
+            if (btn1.Text == btn4.Text && btn4.Text == btn7.Text && btn1.Text != "")
+            {
+                btn1.BackColor = Color.Green;
+                btn4.BackColor = Color.Green;
+                btn7.BackColor = Color.Green;
+            }
+            if (btn2.Text == btn5.Text && btn5.Text == btn8.Text && btn2.Text != "")
+            {
+                btn2.BackColor = Color.Green;
+                btn5.BackColor = Color.Green;
+                btn8.BackColor = Color.Green;
+            }
+            if (btn3.Text == btn6.Text && btn6.Text == btn9.Text && btn3.Text != "")
+            {
+                btn3.BackColor = Color.Green;
+                btn6.BackColor = Color.Green;
+                btn9.BackColor = Color.Green;
+            }
+            if (btn1.Text == btn5.Text && btn5.Text == btn9.Text && btn1.Text != "")
+            {
+                btn1.BackColor = Color.Green;
+                btn5.BackColor = Color.Green;
+                btn9.BackColor = Color.Green;
+            }
+            if (btn3.Text == btn5.Text && btn5.Text == btn7.Text && btn3.Text != "")
+            {
+                btn3.BackColor = Color.Green;
+                btn5.BackColor = Color.Green;
+                btn7.BackColor = Color.Green;
+            }
         }
     }
 }
