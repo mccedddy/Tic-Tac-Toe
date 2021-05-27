@@ -216,7 +216,7 @@ namespace Tic_Tac_Toe
             // 
             this.win1.AutoSize = true;
             this.win1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.win1.Location = new System.Drawing.Point(81, 192);
+            this.win1.Location = new System.Drawing.Point(84, 192);
             this.win1.Name = "win1";
             this.win1.Size = new System.Drawing.Size(27, 32);
             this.win1.TabIndex = 13;
@@ -246,7 +246,7 @@ namespace Tic_Tac_Toe
             // 
             this.win2.AutoSize = true;
             this.win2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.win2.Location = new System.Drawing.Point(523, 192);
+            this.win2.Location = new System.Drawing.Point(526, 192);
             this.win2.Name = "win2";
             this.win2.Size = new System.Drawing.Size(27, 32);
             this.win2.TabIndex = 16;
@@ -319,6 +319,7 @@ namespace Tic_Tac_Toe
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Name = "TicTacToe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic-Tac-Toe";
             this.ResumeLayout(false);
             this.PerformLayout();
