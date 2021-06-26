@@ -150,6 +150,7 @@ namespace Tic_Tac_Toe
         }
         private void winnerColor()
         {
+            // Change the winning tiles color to green
             if (btn1.Text == btn2.Text && btn2.Text == btn3.Text && btn1.Text != "")
             {
                 btn1.BackColor = Color.Green;
